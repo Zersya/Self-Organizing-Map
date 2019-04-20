@@ -6,7 +6,7 @@ import math
 
 #==================================================================
 
-datas = pd.read_csv("Tugas 2 ML Genap 2018-2019 Dataset Tanpa Label.csv")
+datas = pd.read_csv("Tugas 2 ML Genap 2018-2019 Dataset Tanpa Label.csv", header=None)
 
 maxPosRandNeuron = 14
 minPosRandNeuron = 8
@@ -61,7 +61,8 @@ def main():
     x, y = zip(*neurons)
     plt.scatter(x, y, s=np.pi*7, c='red', alpha=0.5, label="Before Process")
     
-    plt.scatter(datas['v0'], datas['v1'], s=np.pi*7, c='grey', alpha=0.5, label="Input Vector")
+    plt.scatter(datas.iloc[:,0], datas.iloc[:,1], s=np.pi*7, c='grey', alpha=0.5, label="Input Vector")
+    print(datas.head)
     while not convergen:
         datas.apply(getBMU, axis=1, it=iteration, omega=omega, rate=rate)
 

@@ -8,13 +8,13 @@ import math
 
 datas = pd.read_csv("Tugas 2 ML Genap 2018-2019 Dataset Tanpa Label.csv", header=None)
 
-maxPosRandNeuron = 14
-minPosRandNeuron = 8
+maxPosRandNeuron = 13
+minPosRandNeuron = 7
 countNeurons = 15
 
 r = 0.1555
 constTimeR = 2
-o = 0.2365
+o = 0.122
 constTimeO = 2
 
 neurons = []
